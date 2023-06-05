@@ -11,7 +11,7 @@ body {
 }
 
 .bg-img{
-	background: url("../../public/assets/images/bg.jpeg");
+	background: url("../images/bg.jpeg");
 	width: 100%;
 
 	background-size:cover;

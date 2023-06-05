@@ -1,7 +1,9 @@
 import './style/style.css'
 import './style/responsive.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 import HeaderComponent from './components/layouts/HeaderComponent'
 import FooterComponent from './components/layouts/FooterComponent'
+import Provider from './Context/AuthContext';
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,10 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body>
+        <Provider>
         <HeaderComponent/>
         {children}
         <FooterComponent/>
+        </Provider>
         
       </body>
     </html>
