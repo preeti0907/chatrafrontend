@@ -125,102 +125,6 @@ body {
 }
 
 
-@media(max-width:1199px){
-	.main-div {
-    background: #f2fbf6;
-} 
-
-
-
-h4.divide::after,h4.divide::before{
-	width: 143px;
-}
-.col-12.col-sm-12.col-md-8.col-lg-5.border.main-div {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-}
-
-
-@media(max-width:991px){
-.main-div {
-    padding-right: 40px;
-      padding-left: 40px ;
-  }
-h4.divide::after, h4.divide::before {
-    width: 180px;
-  }
-}
-
-
-@media(max-width:767px){
-	.container.outer_body.p-0.m-0 {
-    margin: 0 auto !important;
-  
-}
-
-.col-12.col-sm-12.col-md-8.col-lg-5.border.main-div {
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-
-}
-
-
-@media(max-width:639px){
-	.main-div {
-    padding-right: 73px ;
-    padding-left: 73px;
-}
-
-}
-
-
-@media(max-width:479px){
-.bg-img .col-12.col-sm-12.col-md-8.col-lg-5.border.main-div {
-    padding-left: 21px;
-    padding-right: 21px;
-   
-}
-.bg-img .row.justify-content-center{
-	 margin: 0 auto !important;
-
-}
-.bg-img  button.w-100 img {
-    width: 16px;
-}
-.bg-img  .form-content.text-center.mt-3.mb-3,button.Create1.w-100,label.form-label,::placeholder {
-    font-size: 14px;
-}
-
-  h4.divide::after {
-    width: 114px !important;
-}
-h4.divide::before {
-    width: 114px !important;
-}
-
-.bg-img .col-12.col-sm-12.col-md-8.col-lg-5.border.main-div {
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-.bg-img input {
-    padding: 8px !important;
-}
-
-.bg-img button.Create1.w-100{
-	padding: 8px 0px;
-}
-
-.bg-img  .logo img {
-    width: 60px;
-}
-h4.divide {
-    font-size: 14px;
-} 
-}
 
 
 /*==========================================================================   END LOGIN PAGE      =======================================================================================*/
@@ -239,196 +143,51 @@ p.account {
 .row.input-value {
     padding-right: 0px;
 }
-@media(max-width:1199px){
-	.col-6.firstname {
-    flex: 0 0 100%;
-    padding-right: 0px;
-}
 
-.col-6.lastname {
-    padding-right: 0px;
-    flex: 0 0 100%;
-}
-.row.input-value {
-    padding-right: 0px;
-}
-
-}
 
 
 /*=========================================================================== End Start Sign Up  ============================================================================*/
 
 
-/*============================================================================Start Footer===================================================================================*/
+/* ===================================================start Home Page================================================ */
 
-.col-12.col-sm-12.col-md-4.col-lg-3.footer-logo img {
-    width: 100%;
-}
-
-ul li a {
-    font-size: 17px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-.row.footer-inner,.row.footer-inner .footer-logo,.row.footer-inner .footer1,.row.footer-inner .footer2,.row.footer-inner .footer3,.row.footer-inner .footer4 {
-    flex: 0 0 20%;
-}
-
-.row.footer-inner ul {
-    list-style-type: none;
-    padding-left: 0px;
-}
-
-.row.footer-inner ul li a {
-	 font-size: 17px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer {
-	background: #0e9e58;
-    color: #ffff;
+.questions {
+    background: #f1f2f6;
     padding: 70px 0px;
 }
 
-.footer h2 {
-    position: relative;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
+.content-cls {
+    background: #e3f4ee;
+    padding: 25px;
 }
 
-.footer h2::after {
-    content: "";
-    position: absolute;
-    border-bottom: 2px solid green;
-    width: 55px;
-    top: 100%;
-    left: 0;
+.input-section {
+    background: #fff;
+    margin: 30px 0px;
+    padding: 25px;
 }
 
-
-@media(max-width:1199px){
-	.row.footer-inner, .row.footer-inner .footer1, .row.footer-inner .footer2, .row.footer-inner .footer3, .row.footer-inner .footer4{
-		flex: 0 0 50%;
-	}
-
-	.row.footer-inner .footer-logo{
-		flex: 0 0 100%
-	}
-
-
-
-
-		.footer-logo img {
-    width: 200px;
-}
-
-.col-12.col-sm-12.col-md-4.col-lg-3.footer-logo img {
-    width: 200px;
-    margin-bottom: 30px;
-}	
-.footer h2 {
-    font-size: 27px;
-}
-}
-
-
-@media(max-width:639px){
-	.row.footer-inner, .row.footer-inner .footer1, .row.footer-inner .footer2, .row.footer-inner .footer3, .row.footer-inner .footer4{
-		flex:0 0 100%;
-	}
-
-}
-
-
-
-
-/*========================================================== END FOOTER  ======================================================================================*/
-
-
-
-/*===========================================================   Start Header  ========================================================================================*/
-
-header {
-    background: #ffff;
-    padding: 10px 0px;
-}
-
-.col-2.header-logo img {
-    width: 148px;
-}
-
-.col-4.profile {
-    display: flex;
-    align-items: center;
-}
-
-.col-4.profile ul li {
-    text-align: center;
-    display: flex;
-    flex: 0 0 30%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.col-4.profile ul li img {width: 35px;border-radius: 100%;height: 35px;}
-
-.col-4.profile ul li a {
-    flex: 0 0 100%;
-}
-
-.col-4.profile ul {
-   display: flex;
-    text-align: center;
-    padding-left: 0px;
-    width: 100%;
-}
-.col-4.profile ul li a img,.col-4.profile ul li a i {
+.input-section input {
     border: 2px solid #03a359;
-    border-radius: 100%;
-  
+    width: 100%;
+    height: 38px;
 }
 
 
 
-.col-4.profile ul li a i {
-
-    padding: 7px;
- 
+.next-btn {
+    margin-top: 20px;
+    text-align: right;
 }
 
-.row.inner-header {
-    align-items: center;
-    display: flex;
+.next-btn button {
+    background: #03a359;
+    color: #fff;
+    border: 0px;
+    padding: 6px 22px;
 }
 
-.col-4.profile p {
-    margin-bottom: 0px;
-}
-
-
-
-
-/*==============================================================  END HEADER         =======================================================================================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ================================================ end home page     ======================================================= */
 
 
 
