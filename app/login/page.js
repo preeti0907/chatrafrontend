@@ -1,6 +1,8 @@
+
 "use client";
-import { React, useState } from 'react'
 import { signIn, csrfToken, getSession } from 'next-auth/react';
+
+import { React, useState } from 'react'
 import { toast } from "react-toastify"
 import { useRouter } from 'next/navigation';
 import Link from 'next/link'
@@ -61,7 +63,7 @@ function page() {
                                 <h3>Login</h3>
                             </div>
                             <form onSubmit={handleSubmit}>
-                            <input name="csrfToken" type="hidden"defaultValue={csrfToken} />
+                            <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
                                 <div className="mb-3 form-group">
 
                                     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -75,7 +77,7 @@ function page() {
                                                                     <i className={passwordType == "password" ? 'fas fa-eye me-3':'fas fa-eye-slash me-3'}  id="show_eye"></i>
                                     </span>
                                 </div>
-                                <div className="form-group"><button type="submit" className="Create1 w-100">Create Account</button></div>
+                                <div className="form-group"><button type="submit" className="Create1 w-100">Login</button></div>
                             </form>
                             <div className="form-content text-center mt-3 mb-3">
                                 <div className="row">

@@ -1,14 +1,22 @@
 "use client";
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]';
 
 function HeaderComponent() {
-  const session = await getServerSession(authOptions)
 
+  useEffect(() => {
+
+    const getUsers = async () => {
+      const session = await getServerSession(authOptions);
+  console.log(session)
+  
+    };
+   
+   }, []);
 
   return (
-    <>{json.stringify(session)}</>
+    <></>
   )
 }
 

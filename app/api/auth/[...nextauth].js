@@ -15,7 +15,7 @@ export const authOptions = {
         const options = {
 
           method: "POST",
-          
+
           headers: {
             "Content-Type": "application/json",
           },
