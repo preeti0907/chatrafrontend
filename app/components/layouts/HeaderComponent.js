@@ -1,7 +1,11 @@
 "use client";
+
 import React, { useEffect, useState } from 'react';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]';
+
+import React from 'react'
+
 
 function HeaderComponent() {
 
