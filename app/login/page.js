@@ -1,20 +1,25 @@
 
 "use client";
-import { signIn, csrfToken, getSession } from 'next-auth/react';
+import { signIn, csrfToken } from 'next-auth/react';
 
 import { React, useState } from 'react'
 import { toast } from "react-toastify"
 import { useRouter } from 'next/navigation';
-import Link from 'next/link'
+import { useSession } from "next-auth/react"
 
 
-function page() {
+
+const page = async()=> {
     const router = useRouter();
-
+    const { data: session } = useSession()
+    if(session){
+        router.push("/");
+    }
 
     const handleSubmit = async (event) => {
 
         event.preventDefault()
+
         var email = event.target.email.value;
         var password = event.target.password.value;
         if(email == ""){
@@ -72,7 +77,7 @@ function page() {
                                 </div>
                                 <div className="mb-3 form-group">
                                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                                    <input type={passwordType} name='password' className="form-control"  id="exampleInputPassword1" placeholder="Enter Your Password" />
+                                    <input type={passwordType} name="password" className="form-control"  id="exampleInputPassword1" placeholder="Enter Your Password" />
                                     <span type="button" onClick={togglePassword} className="d-flex align-items-center">
                                                                     <i className={passwordType == "password" ? 'fas fa-eye me-3':'fas fa-eye-slash me-3'}  id="show_eye"></i>
                                     </span>

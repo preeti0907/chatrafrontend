@@ -1,10 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
+import { getServerSession } from 'next-auth';
+import { authOptions } from './api/auth/[...nextauth]/route';
 
-function Home() {
+const Home = async()=> {
+  const session = await getServerSession(authOptions);
+
   return (
-    <>ye homepage h
-    <Link href="/page/aboutus">About us</Link>
+    <>
+  {session.user.name}
     </>
   )
 }

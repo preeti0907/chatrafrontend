@@ -41,7 +41,7 @@ export const authOptions = {
             return {
               ...token,
               accessToken: user.access_token,
-              name:user.data.name,
+              name:user.data.user_name,
               email:user.data.email,
               accessToken : user.access_token,
               picture : "",
@@ -62,4 +62,8 @@ export const authOptions = {
         
       },
 };
-export default NextAuth(authOptions);
+const Options =  NextAuth(authOptions);
+
+export { Options as GET, Options as POST }
+
+

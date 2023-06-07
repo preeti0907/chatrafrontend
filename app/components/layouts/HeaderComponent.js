@@ -1,40 +1,26 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/app/api/auth/[...nextauth]';
-
-
-
+import React from 'react';
 
 function HeaderComponent() {
 
-  useEffect(() => {
-
-    const getUsers = async () => {
-      const session = await getServerSession(authOptions);
-  console.log(session)
-  
-    };
-   
-   }, []);
 
   return (
     <>
     
     <header>
-      <div class="container">
-        <div class="row inner-header">
-          <div class="col-2 header-logo">
+      <div className="container">
+        <div className="row inner-header">
+          <div className="col-2 header-logo">
             <img src="assets/images/header-logo.png" alt="logo-image"/>
           </div>
-           <div class="col-6 search"> 
-            <form class="d-flex" role="search">
-               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+           <div className="col-6 search"> 
+            <form className="d-flex" role="search">
+               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                 
             </form>
             </div>
-            <div class="col-4 profile">
+            <div className="col-4 profile">
               <ul>
                 <li>
                   <a href="#"><img src="assets/images/client1.png"/></a>

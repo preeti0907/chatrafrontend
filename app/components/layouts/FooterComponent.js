@@ -3,14 +3,14 @@ import React from 'react'
 function FooterComponent() {
   return (
     <>
-    <div class="footer">
-  <div class="container">
-    <div class="row footer-inner">
-      <div class="col-12 col-sm-12 col-md-4 col-lg-3 footer-logo">
+    <div className="footer">
+  <div className="container">
+    <div className="row footer-inner">
+      <div className="col-12 col-sm-12 col-md-4 col-lg-3 footer-logo">
         <a href="#">  <img src="assets/images/footer-logo.png" alt="logo"/></a>
       
       </div>
-      <div class="col-12 col-sm-12 col-md-4 col-lg-3 footer1">
+      <div className="col-12 col-sm-12 col-md-4 col-lg-3 footer1">
 
          <h2>CHATRA HELP</h2>
         <ul>
@@ -26,7 +26,7 @@ function FooterComponent() {
         </ul>
 
       </div>
-      <div class="col-12 col-sm-12 col-md-4 col-lg-3 footer2">
+      <div className="col-12 col-sm-12 col-md-4 col-lg-3 footer2">
 
          <h2>POLICIES</h2>
          <ul>
@@ -42,7 +42,7 @@ function FooterComponent() {
         </ul>
 
       </div>
-      <div class="col-12 col-sm-12 col-md-4 col-lg-3 footer3">  
+      <div className="col-12 col-sm-12 col-md-4 col-lg-3 footer3">  
 
         <h2>CHANNELS</h2>
 
@@ -58,7 +58,7 @@ function FooterComponent() {
              
             </ul>
       </div>
-      <div class="col-12 col-sm-12 col-md-4 col-lg-3 footer4">
+      <div className="col-12 col-sm-12 col-md-4 col-lg-3 footer4">
 
         <h2>ADDRESS</h2>
         <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
