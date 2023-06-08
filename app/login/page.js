@@ -2,19 +2,19 @@
 "use client";
 import { signIn, csrfToken } from 'next-auth/react';
 
-import { React, useState } from 'react'
+import { React, useState,useEffect } from 'react'
 import { toast } from "react-toastify"
 import { useRouter } from 'next/navigation';
 import { useSession } from "next-auth/react"
 
-
-
-const page = async()=> {
+function page(){
     const router = useRouter();
-    const { data: session } = useSession()
+  const { data: session } = useSession()
+  useEffect(() => {
     if(session){
         router.push("/");
     }
+  });
 
     const handleSubmit = async (event) => {
 

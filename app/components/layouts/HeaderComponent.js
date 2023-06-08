@@ -1,9 +1,11 @@
-"use client";
-
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { getServerSession } from 'next-auth';
 import React from 'react';
+import Link from 'next/link'
 
-function HeaderComponent() {
 
+  const HeaderComponent = async()=> {
+  const session = await getServerSession(authOptions)
 
   return (
     <>
@@ -23,8 +25,11 @@ function HeaderComponent() {
             <div className="col-4 profile">
               <ul>
                 <li>
-                  <a href="#"><img src="assets/images/client1.png"/></a>
-                  <p>John</p>
+
+                  {session ?<><Link href="/"><img src="assets/images/client1.png"/></Link>
+                  <p>{session.user.name}</p></>:<><Link href="/login"><img src="assets/images/client1.png"/></Link>
+                  <p>Login</p></>}
+                  
                 </li>
                 <li>
                   <a href="#"><img src="assets/images/header-icon.png"   /></a>

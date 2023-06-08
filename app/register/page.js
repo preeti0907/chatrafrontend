@@ -1,19 +1,22 @@
 "use client";
-import { React, useState } from 'react'
+import { React, useState,useEffect } from 'react'
 import axios from "axios"
 import { useRouter } from 'next/navigation';
-import { useSession } from "next-auth/react"
+import { useSession,getSession } from "next-auth/react"
 
 import { toast } from "react-toastify"
 
 const Apiurl = "https://chatraschool.vistamatrix.com";
 
-const page = async()=> {
+function page(){
   const router = useRouter();
   const { data: session } = useSession()
-  if(session){
-      router.push("/");
-  }
+  useEffect(() => {
+    if(session){
+        router.push("/");
+    }
+  });
+ 
   
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -36,11 +39,14 @@ const page = async()=> {
         data: formdata
     }).then((response) => {
         if (response.data.status == true) {
+
             toast.success(response.data.message, {
                 position: "top-right",
                 classNameName: "app_toast",
                 autoClose: 1000,
             })
+
+            router.push("/");
         }else{
             toast.error(response.data.message, {
                 position: "top-right",
