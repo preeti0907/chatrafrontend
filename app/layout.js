@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HeaderComponent from './components/layouts/HeaderComponent'
 import FooterComponent from './components/layouts/FooterComponent'
 import Provider from './Context/AuthContext';
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,7 +18,9 @@ export default function RootLayout({ children }) {
  
       <body>
         <Provider>
+        <ToastContainer/>
         <HeaderComponent/>
+        
         {children}
         <FooterComponent/>
         </Provider>
